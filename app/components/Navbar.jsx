@@ -1,8 +1,8 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 function Navbar({ isDarkMode, setIsDarkMode }) {
   const [isScroll, setIsScroll] = useState(false);
@@ -89,13 +89,15 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
             />
           </button>
           <a
-           href="https://wa.me/9074598670?text=Hello%20Nithin%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-ovo dark:border-white/50"
           >
             Contact{" "}
-            <FontAwesomeIcon icon={faWhatsapp} className={`${isDarkMode ? 'text-white' : 'text-black'} text-lg`} />
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt=""
+              className="w-3"
+            />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>

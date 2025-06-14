@@ -2,6 +2,8 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
   return (
@@ -43,11 +45,13 @@ const Header = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          href="#contact"
+          href="https://wa.me/9074598670?text=Hello%20Nithin%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
         >
-          contact me{" "}
-          <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          Contact me{" "}
+          <FontAwesomeIcon icon={faWhatsapp} className="text-lg text-white" />
         </motion.a>
         <motion.a
           initial={{ y: 30, opacity: 0 }}
