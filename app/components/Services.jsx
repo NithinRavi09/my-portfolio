@@ -35,11 +35,8 @@ function Services() {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center mx-w-2xl max-auto mt-5 mb-12 font-Ovo"
       >
-        I am a Self-taught and highly motivated MERN stack developer with
-        hands-on experience building full-stack web applications using modern
-        JavaScript (ES6+). Proficient in building RESTful APIs, responsive UIs,
-        and scalable backend systems. Passionate about solving real-world
-        problems with code and committed to continuous learning.
+        I am a self-taught and highly motivated full-stack web developer with hands-on experience in building dynamic web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). Skilled in creating RESTful APIs, responsive UIs, and scalable backend systems. Passionate about writing clean, maintainable code and solving real-world problems through technology. Actively pursuing continuous learning and building real projects through Brototype’s industry-focused curriculum.
+
       </motion.p>
 
       <motion.div

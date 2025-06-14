@@ -1,9 +1,11 @@
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 
 const Work = ({ isDarkMode }) => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleWorkData = showAll ? workData : workData.slice(0, 4);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,7 +20,7 @@ const Work = ({ isDarkMode }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-center mb-2 text-lg font-ovo"
       >
-        My protfolio
+        My projects
       </motion.h4>
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
@@ -26,7 +28,7 @@ const Work = ({ isDarkMode }) => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="text-center text-5xl font-ovo"
       >
-        My Services
+        My Works
       </motion.h2>
 
       <motion.p
@@ -35,11 +37,12 @@ const Work = ({ isDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I am a Self-taught and highly motivated MERN stack developer with
-        hands-on experience building full-stack web applications using modern
-        JavaScript (ES6+). Proficient in building RESTful APIs, responsive UIs,
-        and scalable backend systems. Passionate about solving real-world
-        problems with code and committed to continuous learning.
+        Each project below reflects my dedication to solving real-world problems
+        with efficient code, clean UI, and scalable architecture. From dynamic
+        e-commerce platforms to real-time chat applications, I focus on creating
+        user-friendly, responsive, and performance-optimized solutions using the
+        MERN stack. My mission is to build software that delivers real value to
+        users.
       </motion.p>
 
       <motion.div
@@ -48,11 +51,12 @@ const Work = ({ isDarkMode }) => {
         transition={{ delay: 0.9, duration: 0.6 }}
         className="grid grid-cols-[var(--auto)] my-10 gap-5 dark:text-black"
       >
-        {workData.map((project, index) => (
+        {visibleWorkData.map((project, index) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
+            onClick={() => window.open(project.link, "_blank")}
             className="aspect-square bg-no-repeat bg-center rounded-lg relative cursor-pointer group"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
@@ -73,10 +77,10 @@ const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
-        href=""
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[var(--color-light-hover)] duration-500 dark:text-white dark:border-white dark:hover:bg-[var(--color-dark-hover)]"
+        onClick={() => setShowAll(!showAll)}
+        className="cursor-pointer w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[var(--color-light-hover)] duration-500 dark:text-white dark:border-white dark:hover:bg-[var(--color-dark-hover)]"
       >
-        Show more{" "}
+        {showAll ? "Show less" : "Show more"}
         <Image
           src={
             isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
