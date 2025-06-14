@@ -1,6 +1,10 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = ({ isDarkMode }) => {
   return (
@@ -26,7 +30,10 @@ const Footer = ({ isDarkMode }) => {
         <p>© 2025 Nithin Ravi. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a target="_blank" href="https://github.com/NithinRavi09">
+            <a target="_blank" href="https://github.com/NithinRavi09" 
+            className="flex items-center gap-1"
+            >
+            <FontAwesomeIcon icon={faGithub} className={isDarkMode ? 'text-white' : 'text-black'} />
               GitHub
             </a>
           </li>
@@ -34,12 +41,18 @@ const Footer = ({ isDarkMode }) => {
             <a
               target="_blank"
               href="https://www.linkedin.com/in/nithinravi-mern-dev/"
+              className="flex items-center gap-1"
             >
+              <FontAwesomeIcon icon={faLinkedin} className={isDarkMode ? 'text-white' : 'text-black'} />
               LinkedIn
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://www.instagram.com/nithin__ravi__/">
+            <a target="_blank" 
+            href="https://www.instagram.com/nithin__ravi__/"
+            className="flex items-center gap-1"
+            >
+              <FontAwesomeIcon icon={faInstagram} className={isDarkMode ? 'text-white' : 'text-black'} />
               Instagram
             </a>
           </li>
