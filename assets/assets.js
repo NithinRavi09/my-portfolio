@@ -36,6 +36,7 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import docker from './docker.png'
+import postman from './postman.png'
 
 export const assets = {
     user_image,
@@ -75,7 +76,8 @@ export const assets = {
     send_icon,
     right_arrow_bold,
     right_arrow_bold_dark,
-    docker
+    docker,
+    postman,
 };
 
 export const workData = [
@@ -84,6 +86,12 @@ export const workData = [
     description: 'MERN Stack | Online Store',
     bgImage: '/elakaro.png', 
     link: 'https://www.elkaroapparel.shop',
+  },
+  {
+    title: 'Movie-Matic Movie Ticket Booking App',
+    description: 'MERN Stack | TMDB',
+    bgImage: '/movie-matic.png', 
+    link: 'https://movie-matic.vercel.app/',
   },
   {
     title: 'Chat App + Socket io',
@@ -163,5 +171,5 @@ export const infoList = [
 
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.docker
+    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.docker, assets.postman
 ];
