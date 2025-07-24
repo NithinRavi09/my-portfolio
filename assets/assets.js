@@ -159,7 +159,7 @@ export const infoList = [
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: 'Education',
-    description: 'Higher Secondary (+2 Commerce), GHSS Thrissur | Full-Stack Web Development – Brototype, Kerala (Project-based, self-learning) | BCA (Planned – IGNOU, Aug 2025)'
+    description: 'Higher Secondary (+2 Commerce), GHSS Thrissur | Full-Stack Web Development – Brototype, Kerala (Project-based, self-learning) | BCA (Planned – IGNOU, Jan 2026)'
   },
   {
     icon: assets.project_icon,
